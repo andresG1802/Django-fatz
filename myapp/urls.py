@@ -6,5 +6,5 @@ urlpatterns = [
     #entre <> pedimos el request
     path('hello/<int:id>',views.hello),
     path('projects/',views.project),
-    path('tasks/<str:name>',views.tasks)
+    path('tasks/',views.tasks)
 ]
