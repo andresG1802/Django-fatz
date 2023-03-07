@@ -1,0 +1,15 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+<h1>Create a new task</h1>
+<!-- Para añadir salto de linea en los input se pone .as_p -->
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button>
+        Save
+    </button>
+</form>
+
+
+{% endblock %}

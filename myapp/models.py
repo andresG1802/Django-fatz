@@ -17,5 +17,9 @@ class Task(models.Model):
     #Cascade significa que cuando se elimine un dato
     #el resto se elimina en cascada
     project = models.ForeignKey(Project,on_delete=models.CASCADE)
+    #Para agregar mas atributos ala tabla tenemos 
+    #que refrescar las migraciones
+    done = models.BooleanField(default=False)
+
     def __str__(self) -> str:
         return self.title + ' - ' + self.project.name
